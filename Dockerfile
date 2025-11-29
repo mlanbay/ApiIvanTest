@@ -36,9 +36,9 @@ COPY --from=build /app/build/libs/*.jar /app/app.jar
 EXPOSE 8080
 
 # (OPCIONAL) Variables de entorno documentadas (Render las inyecta en runtime)
-# ENV SPRING_DATASOURCE_URL=""
-# ENV SPRING_DATASOURCE_USERNAME=""
-# ENV SPRING_DATASOURCE_PASSWORD=""
+ENV SPRING_DATASOURCE_URL="jdbc:mysql://localhost:3306/pruebasIvan?createDatabaseIfNotExist=true"
+ENV SPRING_DATASOURCE_USERNAME="root"
+ENV SPRING_DATASOURCE_PASSWORD=""
 
 # Arranque:
 # -Dserver.port=${PORT:-8080} -> usa el puerto de Render o 8080 en local
