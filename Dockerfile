@@ -6,7 +6,7 @@ WORKDIR /app
 
 # Copia primero los archivos de build para cachear dependencias
 # (ajusta los nombres si usas Maven; más abajo te dejo alternativa)
-COPY build.gradle.kts settings.gradle.kts ./
+COPY build.gradle settings.gradle ./
 COPY gradle gradle
 COPY gradlew gradlew
 
