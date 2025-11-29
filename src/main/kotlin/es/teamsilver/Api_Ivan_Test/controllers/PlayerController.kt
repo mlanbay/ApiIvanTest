@@ -48,7 +48,7 @@ class PlayerController(var jugadoresService: JugadoresService) {
         return ResponseEntity<Jugador>.ok(jugador)
     }
 
-    @PostMapping("/add")
+    @PostMapping("/addInTeam")
     private fun addPlayerInTeam(@RequestBody player: CreatePlayerInATeamRequest): ResponseEntity<Jugador> {
 
         var jugador = jugadoresService.addPlayerToEquipo(player)
